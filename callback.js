@@ -1,21 +1,23 @@
 const cookies = [{ name: 'Chocolate Cookies' }, { name: 'Macaron Cookies' }];
 const newCookie = { name: 'Biscotti Cookies' };
 
+// Progression 1: create a function to get all the cookies
+// Progression 2: using setTimeout() - use 1000 units for time parameter
 function getCookies() {
-  console.log('de');
   setTimeout(() => {
-    // cookies.push((cookie) => {
-    console.log('Hi');
-    // });
+    cookies.forEach((cookie) => {
+      console.log(cookie.name);
+    });
   }, 1000);
 }
-function createCookie(newCookie, callback) {
+//Progression 3: Create a function to creat cookies\
+// use setTimeout() -- use 2000 units for time parameter
+function createCookies(newCookie) {
   setTimeout(() => {
     cookies.push(newCookie);
-    callback();
   }, 2000);
 }
 
-// Progression 5: calling function
-createCookie(newCookie, getCookies);
+// Progression 4: calling functions
 getCookies();
+createCookies(newCookie);
